@@ -1,0 +1,55 @@
+.text {
+  position: relative;
+  top: 0;
+  margin-left: 33rem;
+  margin-top: 5rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 30pt;
+  font-weight: 500;
+  color: var(--tab-menu-text-active);
+  z-index: 9999;
+}
+
+.description-text {
+  overflow-wrap: break-word; /* Breaks the word at the end of the line */
+  margin-top: 4%; /* Space above the description */
+  margin-left: 27.5%;
+  color: var(--tab-menu-text-not-active);
+  max-width: 45rem; /* Set a maximum width to control when to break */
+  font-size: 1.6rem; /* Changed to rem for scalability */
+  white-space: initial;
+  line-height: 1.4; /* Adjust line height for spacing between lines */
+}
+
+
+
+.text-container {
+  display: block;
+  justify-content: center;
+  background-color: var(--screen-background);
+}
+
+.description-text p {
+  margin: 1rem 0; /* Adds margin to each paragraph for spacing */
+  line-height: 1.4; /* Maintain consistent line height */
+  text-align: center; /* Align text to the left or center as desired */
+}
+
+
+.flower-img {
+  transform: rotate(90deg); /* Rotate the image */
+  width: 50%; /* Reduce image width to 50% of the parent container */
+  margin-left: 42%;
+  max-width: 200px; /* Set a maximum width for the image to ensure it doesn't get too big */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container proportionally */
+}
+
+.baker-img{
+  margin-top: -10.5rem;
+  width: 100%; /* Reduce image width to 50% of the parent container */
+  max-height: 900px;
+  object-fit: cover; /* Ensure the image covers the container proportionally */
+}

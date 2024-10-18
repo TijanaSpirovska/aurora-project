@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="first-background"></div>
+  <div class="background-color">
+    <div class="text-overlay">
+      <span>{{headerText}}</span>
+      <span>{{descriptionText}}</span>
+    </div>
+    <img class="img-fluid page-logo" [src]="pageLogo" alt="pageLogo" />
+    <div class="link-container">
+      <div class="link-overlay">
+        {{linkText}}
+      </div>
+      <div class="link-list">
+        <div *ngFor="let link of directLinks">
+          <a [routerLink]="link.url" [routerLinkActive]="'active'">
+            {{ link.title }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

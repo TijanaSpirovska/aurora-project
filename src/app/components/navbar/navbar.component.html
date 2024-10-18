@@ -1,0 +1,44 @@
+<header id="navbar">
+  <div class="row g-0">
+    <ul class="main-menu">
+      <ng-container *ngFor="let menuItem of menuItems">
+        <li
+          class="main-menu-item"
+          [ngStyle]="{ width: 100 / menuItems.length + '%' }"
+        >
+          <a
+            routerLinkActive="active"
+            [routerLink]="[menuItem.url]"
+            [id]="menuItem.title"
+            >{{ menuItem.title }}</a
+          >
+        </li>
+        <li
+          #dropdown="ngbDropdown"
+          ngbDropdown
+          (mouseenter)="open(dropdown)"
+          (mouseleave)="close(dropdown)"
+          (click)="close(dropdown)"
+          *ngIf="menuItem.children"
+          class="main-menu-item"
+          [ngStyle]="{ width: 100 / menuItems.length + '%' }"
+        >
+          <a
+            class="dropdown-trigger"
+            id="menuDropdown"
+            ngbDropdownToggle
+            [ngClass]="{ active: true }"
+            [class.open]="dropdown.isOpen()"
+            >{{ menuItem.title }}</a
+          >
+          <div
+            ngbDropdownMenu
+            aria-labelledby="menuDropdown"
+            class="sub-menu-wrapper"
+          >
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</header>

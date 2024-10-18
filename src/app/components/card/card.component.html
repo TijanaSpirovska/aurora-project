@@ -1,0 +1,16 @@
+<div class="product-card">
+  <div class="product-image" *ngIf="!showText">
+    <img [src]="cardItem.url" [alt]="cardItem.title" (click)="toggleText()" />
+  </div>
+  <div class="product-info" *ngIf="!showText">
+    <h3>{{cardItem.title}}</h3>
+    <p>{{cardItem.weight}}kg</p>
+    <div class="product-price">
+      <p>${{cardItem.price}}</p>
+    </div>
+  </div>
+  <div class="product-text" *ngIf="showText" (click)="toggleText()" >
+    <h3>{{cardItem.title}}</h3>
+    <p>{{cardItem.description}}</p>
+  </div>
+</div>

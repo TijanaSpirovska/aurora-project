@@ -1,0 +1,118 @@
+/* Container for main content */
+.main-container {
+  display: flex;
+  flex-direction: column; /* Stack child elements vertically */
+  min-height: 10vh; /* Ensures it covers full viewport height */
+  position: relative; /* Establishes a positioning context */
+   margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
+
+/* First background for top section */
+.first-background {
+  background-color: #fff;
+  width: 100%;
+  height: 20vh; /* Changed to vh for responsive height */
+  z-index: -1;
+  display: flex;
+  justify-content: space-around; /* Distribute content evenly */
+  align-items: center; /* Center content vertically */
+}
+
+/* Main background section */
+.background-color {
+  background-color: #b69c78; /* Footer background color */
+  width: 100%;
+  height: 40vh; /* Changed to vh for responsive height */
+  overflow: hidden;
+  z-index: 0;
+  display: flex;
+  justify-content: space-around; /* Distribute reviews evenly */
+  align-items: center; /* Center content vertically */
+  padding: 1rem; /* Add padding for spacing */
+  flex-wrap: nowrap;
+}
+
+/* Text overlay for header */
+.text-overlay {
+  position: absolute;
+  left: 0;
+  // margin-right: 50%;
+  // margin-top: -5vh; 
+  margin-left: 2rem; /* Changed to rem for scalability */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 2rem; /* Changed to rem for scalability */
+  font-weight: 600;
+  color: var(--screen-text-in-table);
+  z-index: 9999;
+  margin-bottom: 2rem;
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+  width: 130px;
+  border-bottom: 2px solid transparent;
+  padding: 5px;
+  left: 0;
+  display: block;
+  color: var(--screen-text-in-table);
+  font-size: 18pt;
+  // text-align: center;
+  height: 30.5px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Link overlay */
+.link-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem; /* Changed to rem for scalability */
+  font-weight: 600;
+  color: var(--screen-text-in-table);
+  z-index: 9999;
+}
+
+/* Link container */
+.link-container {
+  display: flex; /* Create a flex container for links */
+  flex-direction: column; /* Place link text and links side by side */
+  justify-content: space-between; /* Space between elements */
+  width: 100%; /* Make sure it spans the entire width */
+  margin-top: 2rem; /* Changed to rem for scalability */
+  margin-left: 75%;
+}
+
+/* Link list */
+.link-list {
+  display: flex;
+  font-size: 1.75rem; /* Changed to rem for scalability */
+  flex-direction: column; /* Stack links vertically */
+}
+
+/* Text overlay for second span */
+.text-overlay span:nth-child(2) {
+  margin-top: 4vh; 
+  overflow-wrap: break-word; /* Breaks the word at the end of the line */
+  max-width: 30rem; /* Set a maximum width to control when to break */
+  font-size: 1.2rem; /* Changed to rem for scalability */
+  white-space: initial;
+  line-height: 1.5; /* Adjust line height for spacing between lines */
+}
+
+/* Page logo */
+.page-logo {
+  position: absolute; /* Position the logo relative to the container */
+  top: calc(20vh - 125px); /* Center the logo between 20vh (first background height) and below it */
+  right: 50%; /* Horizontally center */
+  transform: translateX(50%); /* Horizontally adjust to keep centered */
+  z-index: 99999; /* Ensure the logo is above all other elements */
+  max-width: 250px; /* Limit the maximum width */
+  max-height: 250px; /* Limit the maximum height */
+}

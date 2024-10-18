@@ -1,0 +1,30 @@
+<div class="background-image">
+  <div class="text-overlay">
+    <span>{{text1}}</span>
+    <span>{{text2}}</span>
+  </div>
+
+  <img class="img-fluid" [src]="firstLayer" alt="firstLayer" />
+  <img class="img-fluid" [src]="middleLayer" alt="middleLayer" />
+  <img class="img-fluid" [src]="secondLayer" alt="secondLayer" />
+  <div class="image-overlay">
+    <img class="img-fluid" [src]="bakery" alt="bakery" />
+    <img
+      class="second-image-overlay img-fluid"
+      [src]="bakeryLocation"
+      alt="bakeryLocation"
+    />
+    <div class="second-text-overlay">
+      <span>{{ text3 }}</span>
+      <span>{{ text4 }}</span>
+      <span>{{ text5 }}</span>
+    </div>
+  </div>
+</div>
+<div class="background-color">
+  <div class="review-overlay" *ngFor="let review of reviews">
+    "{{ review.text }}"
+    <span class="review-source">– {{ review.source }}</span>
+  </div>
+</div>
+<app-footer></app-footer>

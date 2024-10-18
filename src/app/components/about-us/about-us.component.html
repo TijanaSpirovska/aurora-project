@@ -1,0 +1,11 @@
+<div class="text-container">
+  <div class="text">
+    <span>{{title}}</span>
+  </div>
+  <div class="description-text">
+    <p *ngFor="let paragraph of paragraphs">{{paragraph}}</p>
+  </div>
+  <img class="img-fluid flower-img" [src]="flowerImg" alt="flowerImg" />
+  <img class="img-fluid baker-img " [src]="bakerImg" alt="bakerImg" />
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,61 @@
+header {
+  background-color: var(--menu-text);
+  border-bottom: 1px solid #e2e2e2;
+  height: 59px;
+.logos{
+  margin-left: 80%;
+  margin-top: -50px;
+}
+  .logo img {
+    max-width: 80px; /* Limit the size to 20px */
+    cursor: pointer; /* Allow the logo to be clickable */
+    display: inline-block; /* Ensure it behaves like an inline element */
+    margin-top: 0px; /* Adjust the margin as necessary */
+  }
+
+
+  .user-menu {
+    margin-top: -50px;
+    text-align: right;
+    padding-right: 1.2%;
+
+    .insta-logo {
+      margin-left: 10px;
+      max-width: 150px;
+      max-height: 32px;
+    }
+
+    .user-name {
+      position: relative;
+      min-width: 250px;
+      width: auto;
+      vertical-align: middle;
+      display: inline-block;
+      text-align: left;
+      height: 30px;
+      font-size: 9pt;
+      line-height: 30px;
+      padding-right: 15px;
+      white-space: nowrap;
+      border: 1px solid var(--non-selected-input-field-frame);
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        width: 30px;
+        height: 31px;
+        float: left;
+        background-image: url("/assets/images/profile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+
+    .service-provider {
+      font-weight: bold;
+      color: var(--sub-menu-hover-item-background);
+      margin-right: 20px;
+    }
+  }
+}

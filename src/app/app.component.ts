@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NAVBAR } from './data/navbar';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'aurora';
+  NAVBAR = NAVBAR;
 }

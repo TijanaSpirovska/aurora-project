@@ -1,0 +1,18 @@
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Cards align from left */
+  gap: 80px; /* Space between cards */
+  padding: 0px 100px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: flex-start;
+  align-items: center; /* Center content inside each card */
+  width: 250px; /* Set a fixed width for each card */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}

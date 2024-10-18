@@ -1,0 +1,19 @@
+<div class="menu-content">
+  <div class="g-0">
+    <span class="header">{{ menuTitle }}</span>
+    <ul class="menu">
+      <ng-container *ngFor="let menuItem of menuItems">
+        <li
+          class="menu-item"
+          [ngClass]="autoWidth ? 'auto-width' : ''"
+          [class.margin-left]="marginLeft"
+        >
+          <a [routerLink]="menuItem.url" [routerLinkActive]="'active'">
+            {{ menuItem.title }}
+          </a>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>
+<router-outlet></router-outlet>
